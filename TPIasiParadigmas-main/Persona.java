@@ -3,29 +3,35 @@ package paquete;
 import java.util.Date;
 
 public class Persona {
-    // Atributos de la clase Persona
     private String nombre;
     private String apellido;
     private int DNI;
-    private Date fecha_nacimiento;
+    private Date fechaNacimiento;
     private String mail;
-;
+    private Domicilio domicilio;
 
-    //Constructores
-    public Persona() {
-        // Constructor vacío por defecto
-    }
+    // Constructor vacío
+    public Persona() {}
 
-    public Persona(String nombre, String apellido, int DNI, Date fecha_nacimiento, String mail, String domicilio) {
+    // Constructor con parámetros
+    public Persona(String nombre, String apellido, int DNI, Date fechaNacimiento, String mail, Domicilio domicilio) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.DNI = DNI;
-        this.fecha_nacimiento = fecha_nacimiento;
+        this.fechaNacimiento = fechaNacimiento;
         this.mail = mail;
-
+        this.domicilio = domicilio;
     }
 
     // Getters y Setters
+    public Domicilio getDomicilio() {
+        return domicilio;
+    }
+
+    public void setDomicilio(Domicilio domicilio) {
+        this.domicilio = domicilio;
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -51,11 +57,11 @@ public class Persona {
     }
 
     public Date getFechaNacimiento() {
-        return fecha_nacimiento;
+        return fechaNacimiento;
     }
 
-    public void setFechaNacimiento(Date fecha_nacimiento) {
-        this.fecha_nacimiento = fecha_nacimiento;
+    public void setFechaNacimiento(Date fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
     }
 
     public String getMail() {
@@ -65,6 +71,4 @@ public class Persona {
     public void setMail(String mail) {
         this.mail = mail;
     }
-    
 }
-
