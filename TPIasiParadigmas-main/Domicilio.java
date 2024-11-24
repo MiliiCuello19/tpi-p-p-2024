@@ -1,12 +1,15 @@
 package paquete;
 
 public class Domicilio {
-    // Atributos de la clase Domicilio
     private String calle;
     private String ciudad;
     private String numeroDpto;
     private String codigoPostal;
 
+    // Constructor vacío
+    public Domicilio() {}
+
+    // Constructor con parámetros
     public Domicilio(String calle, String ciudad, String numeroDpto, String codigoPostal) {
         this.calle = calle;
         this.ciudad = ciudad;
@@ -14,7 +17,7 @@ public class Domicilio {
         this.codigoPostal = codigoPostal;
     }
 
-    // Métodos Getters y Setters
+    // Getters y Setters
     public String getCalle() {
         return calle;
     }
@@ -47,5 +50,3 @@ public class Domicilio {
         this.codigoPostal = codigoPostal;
     }
 }
-
-
