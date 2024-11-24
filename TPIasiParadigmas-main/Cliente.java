@@ -1,27 +1,18 @@
 package paquete;
 
 public class Cliente extends Persona {
-    // Atributos de la clase Cliente
-    private Domicilio domicilio;
     private Vehiculo vehiculo;
 
-    // Constructor por defecto de la clase Cliente
-    public Cliente() {
+    // Constructor vacío
+    public Cliente() {}
 
-    }
-
-    //Constructor
-    public Cliente(Domicilio domicilio, Vehiculo vehiculo) {
-        this.domicilio = domicilio;
+    // Constructor con parámetros
+    public Cliente(String nombre, String apellido, int DNI, Domicilio domicilio, Vehiculo vehiculo) {
+        super(nombre, apellido, DNI, null, null, domicilio);
         this.vehiculo = vehiculo;
     }
 
     // Getters y Setters
-
-    public void setDomicilio(Domicilio domicilio) {
-        this.domicilio = domicilio;
-    }
-
     public Vehiculo getVehiculo() {
         return vehiculo;
     }
@@ -29,15 +20,9 @@ public class Cliente extends Persona {
     public void setVehiculo(Vehiculo vehiculo) {
         this.vehiculo = vehiculo;
     }
-    // Metodos
-    //conocer domicilio
-    @Override
-    public Domicilio getDomicilio() {
-        return super.getDomicilio();
-    }
-    //validar cliente
-        public boolean validarCliente () {
-            return domicilio != null && vehiculo != null;
-        }
-    }
 
+    // Método validar cliente
+    public boolean validarCliente() {
+        return getDomicilio() != null && vehiculo != null;
+    }
+}
